@@ -21,7 +21,7 @@ Since all data stays on your device, you have **full control** over managing and
 We may update this Privacy Policy over time. Any changes will be reflected in the app and in this `README.md` file.
 
 ## 7. Contact Us
-For any questions regarding this Privacy Policy, reach out to us at **[YOUR CONTACT EMAIL]**.
+For any questions regarding this Privacy Policy, reach out to us at **harigadanielionut@gmail.com**.
 
 ---
 
