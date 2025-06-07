@@ -1,0 +1,20 @@
+{
+  "android": {
+    "debug": {
+      "keystore": "tool/dhi.kronstadt.keystore",
+      "alias": "alias_dhi.kronstadt",
+      "storePassword": "ionuth2025",
+      "keyPassword" : "dhi.pass.kronstadt",
+      "buildType": "debug",
+      "packageType": "bundle"
+    },
+    "release": {
+      "keystore": "tool/dhi.kronstadt.keystore",
+      "alias": "alias_dhi.kronstadt",
+      "storePassword": "ionuth2025",
+      "keyPassword" : "dhi.pass.kronstadt",
+      "buildType": "release",
+      "packageType": "bundle"
+    }
+  }
+}

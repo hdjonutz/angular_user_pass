@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dihkronstadt.passuser" version="13.18.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>DIH Pass-Manager</name>
+  <description>Sample Apache Cordova App</description>
+  <author email="harigadanielionut@gmail.com" href="">""</author>
+  <content src="index.html" />
+  <access origin="*" />
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <!-- <access origin="https://www." launch-external="yes" /> -->
+  <allow-intent href="http://*/*" />
+  <allow-intent href="https://*/*" />
+  <allow-intent href="tel:*" />
+  <allow-intent href="sms:*" />
+  <allow-intent href="mailto:*" />
+  <allow-intent href="geo:*" />
+  <allow-intent href="market:*" />
+
+  <!-- cross-domain, http, https -->
+  <preference name="AndroidInsecureFileModeEnabled" value="true" />
+  <!-- cordova-plugin-file -->
+  <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+  <preference name="AndroidExtraFilesystems" value="files,cache, sdcard, cache-external, files-external" />
+
+  <platform name="android">
+
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="0"/>
+    <preference name="SplashScreen" value="none"/>
+    <preference name="FadeSplashScreenDuration" value="0" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="none" />
+
+    <!-- <icon density="ldpi" src="src/assets/android/res/mipmap-ldpi/ic_launcher.png" /> -->
+    <icon density="mdpi" src="src/assets/android/res/mipmap-hdpi/ic_launcher.png" />
+    <icon density="hdpi" src="src/assets/android/res/mipmap-mdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="src/assets/android/res/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="src/assets/android/res/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="src/assets/android/res/mipmap-xxxhdpi/ic_launcher.png" />
+
+    <edit-config file="app/src/main/AndroidManifest.xml"
+                 mode="merge" target="/manifest/application"
+                 xmlns:android="http://schemas.android.com/apk/res/android">
+      <application android:usesCleartextTraffic="true" android:requestLegacyExternalStorage="true"/>
+    </edit-config>
+    <edit-config file="app/src/main/AndroidManifest.xml"
+                 mode="merge" target="/manifest/application/activity"
+                 xmlns:android="http://schemas.android.com/apk/res/android">
+      <activity android:exported="true" />
+    </edit-config>
+	</platform>
+
+  <hook src="tool/copy_res.js" type="after_prepare" />
+  <hook src="tool/set_versioncode.js" type="after_prepare" />
+
+</widget>

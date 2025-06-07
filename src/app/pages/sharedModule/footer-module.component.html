@@ -1,0 +1,15 @@
+<mat-divider></mat-divider>
+
+<div fxLayout="column"
+     fxLayoutGap="12px"
+     class="row-lg"
+     style="padding: 0 25px 0 25px;"
+>
+  <div fxLayout="row wrap grid" fxLayout.lt-sm="column" fxLayoutGap="12px" fxLayoutAlign="flex-start">
+    <div line50Percent #rights [outboundData]="[rightsReserved]"> </div>
+    <ng-container *ngIf="rightsTemplateRef" [ngTemplateOutlet]="rightsTemplateRef"></ng-container>
+  </div>
+</div>
+  <!--
+  https://stackoverflow.com/questions/60175336/uncaught-typeerror-cannot-read-property-endswith-of-undefined-at-layoutgapsty
+-->

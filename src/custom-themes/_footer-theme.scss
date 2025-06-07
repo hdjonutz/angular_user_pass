@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use './_constants';
+// @use 'node_modules/@angular/material/index' as mat;
+@use '@angular/material' as mat;
+
+@mixin footer-theme($light-theme) {
+  $primary: map.get($light-theme, primary);
+  $color: mat.m2-get-color-from-palette($primary);
+
+  footer {
+    background-color: $color;
+    aio-footer {
+      & > * {
+        color: constants.$white;
+      }
+
+      a {
+        color: constants.$white;
+      }
+
+      h3 {
+        color: constants.$white;
+      }
+    }
+  }
+}

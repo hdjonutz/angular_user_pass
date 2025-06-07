@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/pages/sharedModule/footer-module.component.scss"],
+  "sourcesContent": ["@use '../../../custom-themes/constants';\r\n@use '../../../custom-themes/mixins';\r\n:host{\r\n display: flex;\r\n}\r\nul {\r\n  list-style-type: none;\r\n}\r\n.xs{\r\n  font-size: 17px;\r\n}\r\n.sm{\r\n  font-size: 16px;\r\n}\r\n.md{\r\n  font-size: 14px;\r\n}\r\n.lg {\r\n  font-size: 14px;\r\n}\r\n.xl {\r\n  font-size: 14px;\r\n}\r\n"],
+  "mappings": ";AAEA;AACC,WAAA;;AAED;AACE,mBAAA;;AAEF,CAAA;AACE,aAAA;;AAEF,CAAA;AACE,aAAA;;AAEF,CAAA;AACE,aAAA;;AAEF,CAAA;AACE,aAAA;;AAEF,CAAA;AACE,aAAA;;",
+  "names": []
+}

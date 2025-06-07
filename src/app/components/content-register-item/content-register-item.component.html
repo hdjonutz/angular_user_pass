@@ -1,0 +1,52 @@
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Please complete all fields.</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <mat-form-field class="example-full-width">
+            <mat-label>Item name</mat-label>
+            <input type="Item" matInput [formControl]="itemFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.: Google">
+            <mat-error *ngIf="itemFormControl.hasError('required')">
+              User is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>User</mat-label>
+            <input type="Item" matInput [formControl]="userFormControl" [errorStateMatcher]="matcher"
+                   placeholder="Ex.: Daniel / daniel@gmail.com">
+            <mat-error *ngIf="userFormControl.hasError('required')">
+              User is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput [formControl]="passFormControl" [errorStateMatcher]="matcher"
+                   [type]="hide ? 'password' : 'text'"
+                   placeholder="pasS2023?=c">
+            <!--<mat-hint>You should insert MIN 8 chars, MAX 20 chars, min one of specialChar: $@$!%*?&</mat-hint> -->
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="passFormControl.hasError('required')">
+              Password is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="passFormControl.hasError('minlength')">
+              Password is <strong>to small [min 8 chars]</strong>
+            </mat-error>
+            <mat-error *ngIf="passFormControl.hasError('maxlength')">
+              Password is <strong>to long [max 20 chars]</strong>
+            </mat-error>
+            <mat-error *ngIf="passFormControl.hasError('pattern')">
+              Password muss contain <strong>Big & small & special Chars [min 8 chars, max 20 chars]</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+

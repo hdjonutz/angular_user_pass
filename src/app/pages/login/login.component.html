@@ -1,0 +1,55 @@
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Login form</mat-card-title>
+        <mat-card-subtitle>Login to access all features</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <mat-form-field class="example-full-width">
+              <mat-label>User</mat-label>
+              <input type="User" matInput [formControl]="userFormControl" [errorStateMatcher]="matcher"
+                     placeholder="Ex.: Daniel Hariga">
+              <mat-error *ngIf="userFormControl.hasError('required')">
+                User is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input type="password" matInput [formControl]="passFormControl" [errorStateMatcher]="matcher"
+                     [type]="hide ? 'password' : 'text'"
+                     placeholder="pasS2023?=c">
+              <!--<mat-hint>You should insert MIN 8 chars, MAX 20 chars, min one of specialChar: $@$!%*?&</mat-hint> -->
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="passFormControl.hasError('required')">
+                Password is <strong>required</strong>
+              </mat-error>
+              <mat-error *ngIf="passFormControl.hasError('minlength')">
+                Password is <strong>to small [min 8 chars]</strong>
+              </mat-error>
+              <mat-error *ngIf="passFormControl.hasError('maxlength')">
+                Password is <strong>to long [max 20 chars]</strong>
+              </mat-error>
+            </mat-form-field>
+
+            <div class="form-group">
+              <button [disabled]="loading" mat-flat-button color="primary" (click)="onSubmit();">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Login
+              </button>
+              &nbsp;
+              <a routerLink="/register" class="btn btn-link">Register</a>
+            </div>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+

@@ -1,0 +1,11 @@
+<!--
+<button mat-button (click)="updateForm();" fxHide fxShow.gt-sm>updateform</button> -->
+
+<button *ngIf="!isLoggedIn" mat-button (click)="login();">
+  {{'LogIn'}}
+</button>
+
+<span *ngIf="isLoggedIn">
+  {{nameVorname}}
+</span>
+

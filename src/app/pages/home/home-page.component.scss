@@ -1,0 +1,58 @@
+// @import './../../../styles.scss';
+
+.full{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+:host{
+  @extend .full;
+}
+.titleRowIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+  padding: 2px;
+  align-items: center;
+  &.title{
+    font-size: 24px;
+    mat-icon{
+      width: 50px;
+    }
+  }
+  &.icon-padding-right{
+   padding-right: 50px;
+  }
+}
+.table-element{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+}
+.mat-item{
+  display: flex;
+
+  .details{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &.mat-divider{
+    border: 1px solid #aaaa;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 7px;
+    margin: 5px;
+    padding: 7px;
+  }
+
+  mat-icon{
+    width: 50px;
+  }
+}

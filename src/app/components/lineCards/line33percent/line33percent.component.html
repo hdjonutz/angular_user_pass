@@ -1,0 +1,33 @@
+<ng-container>
+  <ng-container *ngIf="!showIcons && size === 'full'">
+    <div *ngFor="let k of outboundData"
+         fxLayout="row"
+         ngClass="large-12-sm-gap"
+         ngClass.lt-md="large-12-sm-gap"
+         ngClass.lt-sm="large-12-sm-gap"
+         fxLayoutGap.md="10px"
+         fxLayoutGap.sm="5px" class="text-center" style="height: 40px">
+      {{k}}
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="!showIcons && size !== 'full'">
+    <div *ngFor="let k of outboundData"
+         fxLayout="row"
+         ngClass="large-4-sm-gap"
+         ngClass.lt-md="large-6-sm-gap"
+         ngClass.lt-sm="large-12-sm-gap"
+         fxLayoutGap.md="10px"
+         fxLayoutGap.sm="5px" class="text-center" style="height: 40px; flex: 1">
+      {{k}}
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="showIcons && !size">
+    <div *ngFor="let k of ['facebook', 'twitter', 'facebook-messenger', 'pinterest-fill']" style="padding: 0 5px;">
+      <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+        <img src="./assets/images/{{k}}.svg" />
+      </button>
+    </div>
+  </ng-container>
+</ng-container>

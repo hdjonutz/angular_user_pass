@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/lineCards/line50percent/line50percent.component.scss"],
+  "sourcesContent": [":host{\r\n  margin: 0;\r\n  padding: 0;\r\n  display: flex;\r\n  flex:1;\r\n}\r\n"],
+  "mappings": ";AAAA;AACE,UAAA;AACA,WAAA;AACA,WAAA;AACA,QAAA;;",
+  "names": []
+}

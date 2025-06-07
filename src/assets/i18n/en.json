@@ -1,0 +1,11 @@
+{
+  "test": {
+    "b": "{{'test.b' | translate}}"
+  },
+  "title": "Service feedback for {{company}}",
+  "TabTypeConfig": "Types Config",
+  "TabColumnsConfig": "Table Columns Config",
+  "updateForms": "Update Forms => Storage [{{id}}]",
+  "jsonSave": "JSON Save [{{type}}]",
+  "updateTypes": "JSON save [Update Config Types for FormJSON]"
+}
