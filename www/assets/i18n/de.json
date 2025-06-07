@@ -1,0 +1,11 @@
+{
+  "test": {
+    "b": "{{'test.b' | translate}}"
+  },
+  "title": "Service feedback for {{company}}",
+  "TabTypeConfig": "Typkonfiguration",
+  "TabColumnsConfig": "Tabellenspaltenkonfiguration",
+  "updateForms": "Formulare aktualisieren => Lagerung {{id}}",
+  "jsonSave": "JSON Speichern [{{type}}]",
+  "updateTypes": "JSON Speichern [Konfigurationstypen für FormJSON aktualisieren]"
+}

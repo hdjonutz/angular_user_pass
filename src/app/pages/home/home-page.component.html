@@ -1,0 +1,41 @@
+<div data-debug-html-tag="home-page" class="full">
+
+
+  <div style=" display: flex; flex-direction: column; align-items: self-end;">
+    <button mat-fab extended color="primary" (click)="edit()">
+      Insert new element <mat-icon>add_box</mat-icon>
+    </button>
+  </div>
+
+
+  <div class="table-element">
+    <div class="mat-item mat-divider" *ngFor="let item of data; index as i">
+      <mat-icon matListItemIcon>folder</mat-icon>
+      <div class="details">
+        <div class="titleRowIcon title">
+          <div style="width: 100%">{{item.corporate}}</div>
+          <button mat-icon-button color="primary" (click)="edit(item)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="primary" (click)="delete(item)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+
+        <div class="titleRowIcon icon-padding-right">
+          <div style="width: 100%">{{item.user}}</div>
+          <button mat-icon-button color="primary" (click)="copy(item.user)">
+            <mat-icon>content_copy</mat-icon>
+          </button>
+        </div>
+        <div class="titleRowIcon icon-padding-right">
+          <div style="width: 100%">**************</div>
+          <button mat-icon-button color="primary" (click)="copy(item.pass)">
+            <mat-icon>content_copy</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

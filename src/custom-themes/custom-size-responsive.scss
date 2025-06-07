@@ -1,0 +1,94 @@
+$gap: 32px;
+$medium_gap: 22px;
+$small-gap: 12px;
+
+.row-lg {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+.row-xl{
+  max-width: 76rem;
+  margin: 0 auto;
+}
+.std-padding{padding: 20px 20px 10px 20px;}
+.colum{ flex-direction: column; }
+.row{ flex-direction: row; }
+.grid{display: grid;}
+
+$a: 8.33333%;
+$b: 16.66667%;
+$c: 25%;
+$d: 33.33333%;
+$e: 41.66667%;
+$f: 50%;
+$g: 58.33333%;
+$h: 66.66667%;
+$i: 75%;
+$j: 83.33333%;
+$k: 91.66667%;
+$l: 100%;
+
+.large-1-sm-gap{width: calc(#{$a} - #{$small_gap});}
+.large-2-sm-gap{width: calc(#{$b} - #{$small_gap});}
+.large-3-sm-gap{width: calc(#{$c} - #{$small_gap});}
+.large-4-sm-gap{width: calc(#{$d} - #{$small_gap});}
+.large-5-sm-gap{width: calc(#{$e} - #{$small_gap});}
+.large-6-sm-gap{width: calc(#{$f} - #{$small_gap});}
+.large-7-sm-gap{width: calc(#{$g} - #{$small_gap});}
+.large-8-sm-gap{width: calc(#{$h} - #{$small_gap});}
+.large-9-sm-gap{width: calc(#{$i} - #{$small_gap});}
+.large-10-sm-gap{width: calc(#{$j} - #{$small_gap});}
+.large-11-sm-gap{width: calc(#{$k} - #{$small_gap});}
+.large-12-sm-gap{width: $l;}
+
+.large-1-md-gap{width: calc(#{$a} - #{$medium-gap});}
+.large-2-md-gap{width: calc(#{$b} - #{$medium-gap});}
+.large-3-md-gap{width: calc(#{$c} - #{$medium-gap});}
+.large-4-md-gap{width: calc(#{$d} - #{$medium-gap});}
+.large-5-md-gap{width: calc(#{$e} - #{$medium-gap});}
+.large-6-md-gap{width: calc(#{$f} - #{$medium-gap});}
+.large-7-md-gap{width: calc(#{$g} - #{$medium-gap});}
+.large-8-md-gap{width: calc(#{$h} - #{$medium-gap});}
+.large-9-md-gap{width: calc(#{$i} - #{$medium-gap});}
+.large-10-md-gap{width: calc(#{$j} - #{$medium-gap});}
+.large-11-md-gap{width: calc(#{$k} - #{$medium-gap});}
+.large-12-md-gap{width: $l;}
+
+.large-1-lg-gap{width: calc(#{$a} - #{$gap});}
+.large-2-lg-gap{width: calc(#{$b} - #{$gap});}
+.large-3-lg-gap{width: calc(#{$c} - #{$gap});}
+.large-4-lg-gap{width: calc(#{$d} - #{$gap});}
+.large-5-lg-gap{width: calc(#{$e} - #{$gap});}
+.large-6-lg-gap{width: calc(#{$f} - #{$gap});}
+.large-7-lg-gap{width: calc(#{$g} - #{$gap});}
+.large-8-lg-gap{width: calc(#{$h} - #{$gap});}
+.large-9-lg-gap{width: calc(#{$i} - #{$gap});}
+.large-10-lg-gap{width: calc(#{$j} - #{$gap});}
+.large-11-lg-gap{width: calc(#{$k} - #{$gap});}
+.large-12-lg-gap{width: $l;}
+
+.off-1-l{position: relative; margin-left: $a;}
+.off-2-l{position: relative; margin-left: $b;}
+.off-3-l{position: relative; margin-left: $c;}
+.off-4-l{position: relative; margin-left: $d;}
+.off-5-l{position: relative; margin-left: $e;}
+.off-6-l{position: relative; margin-left: $f;}
+.off-7-l{position: relative; margin-left: $g;}
+.off-8-l{position: relative; margin-left: $h;}
+.off-9-l{position: relative; margin-left: $i;}
+.off-10-l{position: relative; margin-left: $j;}
+.off-11-l{position: relative; margin-left: $k;}
+.off-12-l{position: relative; margin-left: $l;}
+
+.offset-1-r{position: relative; margin-right: $a;}
+.offset-2-r{position: relative; margin-right: $b;}
+.offset-3-r{position: relative; margin-right: $c;}
+.offset-4-r{position: relative; margin-right: $d;}
+.offset-5-r{position: relative; margin-right: $e;}
+.offset-6-r{position: relative; margin-right: $f;}
+.offset-7-r{position: relative; margin-right: $g;}
+.offset-8-r{position: relative; margin-right: $h;}
+.offset-9-r{position: relative; margin-right: $i;}
+.offset-10-r{position: relative; margin-right: $j;}
+.offset-11-r{position: relative; margin-right: $k;}
+.offset-12-r{position: relative; margin-right: $l;}

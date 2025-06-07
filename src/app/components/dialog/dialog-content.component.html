@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{title}}</h2>
+<mat-divider></mat-divider>
+<mat-dialog-content (scroll)="onScroll($event)" class="mat-typography">
+  <ng-container>
+    <ng-template #externalContent></ng-template>
+  </ng-container>
+</mat-dialog-content>
+<mat-divider></mat-divider>
+<mat-dialog-actions align="end">
+  <button mat-flat-button mat-dialog-close>Cancel</button>
+  <button *ngIf="!deleteItem"
+          [disabled]="buttonSaveDisabled"
+          mat-flat-button
+          color="primary" (click)="onClickSaveDataFromComponent()">Save</button>
+  <button *ngIf="deleteItem"
+          [disabled]="buttonDeleteDisabled"
+          mat-flat-button
+          color="primary" (click)="onClickDeleteDataFromComponent()">Delete</button>
+
+</mat-dialog-actions>

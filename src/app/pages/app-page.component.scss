@@ -1,0 +1,13 @@
+@use '../../custom-themes/mixins';
+
+footer {
+  position: relative;
+  @include mixins.line-height(10);
+  z-index: 0;
+}
+.spacer{
+  display: flex;
+  flex: 1;
+}
+
+

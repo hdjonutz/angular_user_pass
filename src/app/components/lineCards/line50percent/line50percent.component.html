@@ -1,0 +1,13 @@
+<ng-container>
+  <ng-container *ngIf="!showIcons && size !== 'full'">
+    <div *ngFor="let k of outboundData"
+         fxLayout="row"
+         ngClass="large-6-sm-gap"
+         ngClass.lt-md="large-6-sm-gap"
+         ngClass.lt-sm="large-12-sm-gap"
+         fxLayoutGap.md="10px"
+         fxLayoutGap.sm="5px" class="text-center" style="height: 40px; flex: 1">
+      {{k}}
+    </div>
+  </ng-container>
+</ng-container>

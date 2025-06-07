@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use './_constants';
+// @use 'node_modules/@angular/material/index' as mat;
+@use '@angular/material' as mat;
+
+@mixin scrollbar-theme($light-theme) {
+  $primary: map.get($light-theme, primary);
+  $color: mat.m2-get-color-from-palette($primary);
+
+  $accent: map.get($light-theme, accent);
+  $color_primary: mat.m2-get-color-from-palette($primary);
+  $color_accent: mat.m2-get-color-from-palette($accent);
+
+  $c_primary:        $color_primary;   /*#397524;*/
+  $c_primary_hover:  darken($color_primary, 10%);   /*#62A34B;*/
+
+  $c_back: #DFE9EB;
+  $c_back_hover: #B8C0C2;
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: $c_primary $c_back;
+  }
+
+  /* Chrome, Edge and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  *::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: $c_back;
+    border: 3px solid #FFFFFF;
+  }
+
+  *::-webkit-scrollbar-track:hover {
+    background-color: $c_back_hover;
+  }
+
+  *::-webkit-scrollbar-track:active {
+    background-color: $c_back_hover;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: $c_primary;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: $c_primary_hover;
+  }
+
+  *::-webkit-scrollbar-thumb:active {
+    background-color: $c_primary_hover;
+  }
+
+}
+
