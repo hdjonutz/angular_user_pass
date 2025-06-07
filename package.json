@@ -1,6 +1,6 @@
 {
-  "name": "angular-rugaciuni3",
-  "nameProj": "rugaciuni",
+  "name": "pass-manager",
+  "nameProj": "Pass-manager",
   "version": "13.18.1",
   "scripts": {
     "ng": "ng",
